@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Cricket Scheduling
+        </title>
+        <link rel = "stylesheet" href="../css/sports.css"/>
+    </head>
+
+    <body>
+        <img id = "image" src="../img/cricket.jpg"/>
+
+        <h1 id = "heading">
+            Cricket
+        </h1>
+
+        <section id="schedule"> 
+            <div class="info" >Schedule</div>
+            {{#each data}}
+                {{#if this.first}}
+                    <h3>{{this.second}}</h3><br>
+                {{else}}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.second}}<br>
+                {{/if}}
+            {{/each}}
+        </section>
+
+        <section >
+            <div class= "info">Important Links :</div>
+            <div><a class = "links" href="https://www.icc-cricket.com/">International Cricket Council</a></div>
+            <div><a class = "links" href="https://www.bcci.tv/">Board of Cricket Council India</a></div>  
+        </section>
+
+    </body>
+</html>
