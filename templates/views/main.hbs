@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Schedular
+        </title>
+
+        <link rel = "stylesheet" href="./css/main.css"/>
+    </head>
+
+    <body>
+        <img id = "image" src="./img/main.jpg"/>
+
+        <h1 id = "heading">
+            Tournament Schedular
+        </h1>
+
+        <h3>
+            Creates The Schedule Instantly
+        </h3>
+
+        <h5 id = "desc">
+            Create the schedule for your tournament now.
+        </h5>
+
+        <main>
+            <section>
+                <div class = "top">Sport</div>
+                <select class = "data" id = "selectsport">
+                    <option>Select your Sport</option> 
+                    <option>Chess</option> 
+                    <option>Cricket</option>
+                    <option>Football</option> 
+                </select>
+            </section>
+            
+            <section>
+                <div class = "top">Number of Teams</div>
+    
+                <select  id="noofteams" class = "data">
+                    <option value = "number of teams">number of teams</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                    <option value = "6">6</option>
+                    <option value = "7">7</option>
+                    <option value = "8">8</option>
+                    <option value = "9">9</option>
+                    <option value = "10">10</option>
+                    <option value = "11">11</option>
+                    <option value = "12">12</option>
+                    <option value = "13">13</option>
+                    <option value = "14">14</option>
+                    <option value = "15">15</option>
+                    <option value = "16">16</option>
+                    <option value = "17">17</option>
+                    <option value = "18">18</option>
+                </select>
+        
+            </section>
+            
+    
+            <section>
+                <div class = "top">Number Of Pools</div>
+                <select id = "noofpools" class = "data">
+                    <option value="number of pools">number of pools</option>
+                    <option value ="1">1</option> 
+                    <option value ="2">2</option>
+                    <option value ="4">4</option> 
+                </select>
+            </section>
+    
+    
+    
+            
+            <section>
+                <div class = "top">Type of Schedule</div>
+                <select id="typeofschedule" class = "data">
+                    <option value="type of schedule">type of schedule</option>
+                    <option value ="Elimination">Elimination</option> 
+                    <option value ="Round Robin">Round Robin</option>
+                    <option value = "League">League</option> 
+                </select>
+            </section>
+            
+    
+            <div>
+                <button id = "submit" type="button">Create Schedule</button>
+            </div>
+
+        </main>
+
+        <p id= "para">Select the number of teams and type of schedule 
+            above to start the tournament.</p>
+        
+
+        <script src = "https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src = "./js/main.js"></script>
+    </body>
+</html>
+
+
+
+// Learn bootstrap basics
+
+// Create Nav bar
+
+// Create a elimination schedule and link it with create schedule button

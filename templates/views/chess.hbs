@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Chess Scheduling
+        </title>
+        
+        <script src = "https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <link rel = "stylesheet" href="../css/sports.css"/>
+    </head>
+
+    <body>
+        <img id = "image" src="../img/chess.jpg"/>
+
+        <h1 id = "heading">
+            Chess
+        </h1>
+
+        <section id="schedule"> 
+            <div class="info" >Schedule</div>
+            <ul>
+                {{#each data}}
+                    {{#if this.first}}
+                        <h3>{{this.second}}</h3><br>
+                    {{else}}
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.second}}<br>
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </section>
+
+
+
+        <section >
+            <div class= "info">Important Links :</div>
+            <div><a class = "links" href="https://www.fide.com/">International Chess Federation</a></div>
+            <div><a class = "links" href="https://en.wikipedia.org/wiki/World_Chess_Championship">Chess Championship</a></div>  
+        </section>
+
+
+    </body>
+</html>

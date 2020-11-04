@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Football Scheduling
+        </title>
+        <link rel = "stylesheet" href="../css/sports.css"/>
+    </head>
+
+    <body>
+        <img id = "image" src="../img/football.jpg"/>
+
+        <h1 id = "heading">
+            Football
+        </h1>
+
+        <section id="schedule"> 
+            <div class="info" >Schedule</div>
+        {{#each data}}
+            {{#if this.first}}
+                <h3>{{this.second}}</h3><br>
+            {{else}}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.second}}<br>
+            {{/if}}
+        {{/each}}
+        </section>
+
+        <section >
+            <div class= "info">Important Links :</div>
+            <div><a class = "links" href="https://www.fifa.com/">Fédération Internationale de Football Association</a></div>
+            <div><a class = "links" href="https://www.the-aiff.com/">All India Football Federation</a></div>  
+        </section>
+
+    </body>
+</html>
