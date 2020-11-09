@@ -12,10 +12,12 @@ function parse(s) {
     let arr = []
     let cur = new String();
     for (let i = 0; i < s.length; i++) {
-        let obj = { first: true, second: "" };
-        if (s[i] == 'n') {
-            if (s[i - 1] != ':') 
-            obj.first = false;
+        let obj = { first: false, second: "", third: false };
+        if (s[i] == '~') {
+            if (s[i - 1] == '-')
+                obj.first = true;
+            if (s[i - 1] == ':')
+                obj.third = true;
             obj.second = cur;
             cur = "";
             arr.push(obj);
@@ -38,7 +40,7 @@ app.get('', (req, res) => {
 })
 
 app.get('/Chess', (req, res) => {
-    const str = 'a ' + req.query.numofteams;
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type;
     exec(str, (err, stdout, stderr) => {
         let arr = parse(stdout);
         res.render('chess', {
@@ -48,7 +50,7 @@ app.get('/Chess', (req, res) => {
 })
 
 app.get('/Cricket', (req, res) => {
-    const str = 'a ' + req.query.numofteams;
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type;
     exec(str, (err, stdout, stderr) => {
         let arr = parse(stdout);
         res.render('cricket', {
@@ -58,8 +60,9 @@ app.get('/Cricket', (req, res) => {
 })
 
 app.get('/Football', (req, res) => {
-    const str = 'a ' + req.query.numofteams;
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type;
     exec(str, (err, stdout, stderr) => {
+        console.log(stdout)
         let arr = parse(stdout);
         res.render('football', {
             'data': arr

@@ -17,13 +17,19 @@
 
         <section id="schedule"> 
             <div class="info" >Schedule</div>
-            {{#each data}}
-                {{#if this.first}}
-                    <h3>{{this.second}}</h3><br>
-                {{else}}
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.second}}<br>
-                {{/if}}
-            {{/each}}
+            <ul>
+                {{#each data}}
+                    {{#if this.first}}
+                        <h1>{{this.second}}</h3><br>
+                    {{else}}
+                        {{#if this.third}}
+                            <h3>{{this.second}}</h2>
+                        {{else}}
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.second}}<br>
+                        {{/if}}
+                    {{/if}}
+                {{/each}}
+            </ul>
         </section>
 
         <section >
