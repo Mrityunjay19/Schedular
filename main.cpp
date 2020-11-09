@@ -44,7 +44,7 @@ void scheduleRoundRobin(int n, int pools){
     
 
     for(int p=1 ; p<=pools ; p++){
-        cout<<"nPOOL "<< p <<":-n";
+        cout<<"POOL "<< p <<":-~";
 
         int offset = nn*(p-1);
         colorGraph(graph, nn, chromatic_number, offset);
@@ -57,13 +57,12 @@ void scheduleRoundRobin(int n, int pools){
         }
 
         for (int i=0 ; i<chromatic_number ; i++) {
-            cout<<"Week "<< i+1 <<":n";
+            cout<<"Week "<< i+1 <<":~";
             for (auto p : mp[i]) {
-                cout<<"Team-"<< p.first <<" v/s Team-"<< p.second << "n";
+                cout<<"Team-"<< p.first <<" v/s Team-"<< p.second << "~";
             }
         }
 
-        cout<<"n";
     }
 }
 
@@ -71,7 +70,7 @@ void scheduleRoundRobin(int n, int pools){
 void scheduleKnockout(int n, int pools){
 
     for(int p=1 ; p<=pools ; p++){
-        cout<<"nPOOL "<< p <<":-n";
+        cout<<"POOL "<< p <<":-~";
 
         int nn = n/pools;
         int offset = nn*(p-1);
@@ -118,11 +117,11 @@ void scheduleKnockout(int n, int pools){
             }
         }
 
-        cout<<"Round 1:n";
+        cout<<"Round 1:~";
         for(int i=offset ; i<offset+nn ; i++){
             if(pairing[i].second == 0){
                 cout<<"Match-"<< ctr <<": ";
-                cout<<"Team-"<< i <<" v/s Team-"<< i+1 <<"n";
+                cout<<"Team-"<< i <<" v/s Team-"<< i+1 <<"~";
                 temp.push_back("Winner of Match-"+to_string(ctr));
                 ctr++;
                 i++;
@@ -136,12 +135,12 @@ void scheduleKnockout(int n, int pools){
 
         while(round < total_rounds){
             
-            cout<<"nRound "<< round <<":n";
+            cout<<"~Round "<< round <<":~";
             int size = temp.size();
 
             for(int i=0 ; i<size ; i+=2){
                 cout<<"Match-"<< ctr <<": ";
-                cout<< temp[i] <<" v/s "<< temp[i+1] <<"n";
+                cout<< temp[i] <<" v/s "<< temp[i+1] <<"~";
                 temp.push_back("Winner of Match-"+to_string(ctr));
                 ctr++;
             }
@@ -151,8 +150,8 @@ void scheduleKnockout(int n, int pools){
         }
 
         ctr--;
-        cout<<"nRound "<< round <<":n";
-        cout<<"Winner of Match-"<< ctr-1 <<" v/s Winner of Match-" << ctr;
+        cout<<"~Round "<< round <<":~";
+        cout<<"Winner of Match-"<< ctr-1 <<" v/s Winner of Match-" << ctr << "~";
     }
 }
 
@@ -161,14 +160,14 @@ void scheduleLeague(int n, int pools){
     scheduleRoundRobin(n, pools);
 
     if(pools == 1){
-        cout<<"nSemifinal-1: 1st Position v/s 4th Position";
-        cout<<"nSemifinal-2: 2nd Position v/s 3rd Position";
-        cout<<"nFINAL: Winner of Semifinal-1 v/s Winner of Semifinal-2";
+        cout<<"~Semifinal-1: 1st Position v/s 4th Position";
+        cout<<"~Semifinal-2: 2nd Position v/s 3rd Position";
+        cout<<"~FINAL: Winner of Semifinal-1 v/s Winner of Semifinal-2";
     }
     else if(pools == 2){
-        cout<<"nSemifinal-1: 1st Position(Pool-1) v/s 2nd Position(Pool-2)";
-        cout<<"nSemifinal-2: 2nd Position(Pool-1) v/s 1st Position(Pool-2)";
-        cout<<"nFINAL: Winner of Semifinal-1 v/s Winner of Semifinal-2";
+        cout<<"~Semifinal-1: 1st Position(Pool-1) v/s 2nd Position(Pool-2)";
+        cout<<"~Semifinal-2: 2nd Position(Pool-1) v/s 1st Position(Pool-2)";
+        cout<<"~FINAL: Winner of Semifinal-1 v/s Winner of Semifinal-2";
     }
 
 }
@@ -182,7 +181,7 @@ int32_t main(int argc, char* argv[]){
     int pools = stoi(argv[2]);
     string match_type = argv[3];
     
-    if(match_type == "Round Robin"){
+    if(match_type == "RoundRobin"){
         scheduleRoundRobin(n, pools);
         
     }
