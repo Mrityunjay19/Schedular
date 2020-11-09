@@ -14,7 +14,8 @@ function parse(s) {
     for (let i = 0; i < s.length; i++) {
         let obj = { first: true, second: "" };
         if (s[i] == 'n') {
-            if (s[i - 1] != ':') obj.first = false;
+            if (s[i - 1] != ':') 
+            obj.first = false;
             obj.second = cur;
             cur = "";
             arr.push(obj);

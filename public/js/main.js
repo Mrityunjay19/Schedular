@@ -10,5 +10,5 @@ submit.addEventListener('click', () => {
     var noofteams = teams.options[teams.selectedIndex].text;
     var type = schedule.options[schedule.selectedIndex].text;
 
-    document.location.href = sport + '/?numofteams=' + noofteams;
+    document.location.href = sport + '/?numofteams=' + noofteams +'&numofpools=' + noofpools + '&type=' + type ;
 })
