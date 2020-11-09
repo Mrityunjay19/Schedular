@@ -160,14 +160,14 @@ void scheduleLeague(int n, int pools){
     scheduleRoundRobin(n, pools);
 
     if(pools == 1){
-        cout<<"~Semifinal-1: 1st Position v/s 4th Position";
-        cout<<"~Semifinal-2: 2nd Position v/s 3rd Position";
-        cout<<"~FINAL: Winner of Semifinal-1 v/s Winner of Semifinal-2";
+        cout<<"~Semifinal-1: 1st Position v/s 4th Position~";
+        cout<<"Semifinal-2: 2nd Position v/s 3rd Position~";
+        cout<<"~FINAL: Winner of Semifinal-1 v/s Winner of Semifinal-2~";
     }
     else if(pools == 2){
-        cout<<"~Semifinal-1: 1st Position(Pool-1) v/s 2nd Position(Pool-2)";
-        cout<<"~Semifinal-2: 2nd Position(Pool-1) v/s 1st Position(Pool-2)";
-        cout<<"~FINAL: Winner of Semifinal-1 v/s Winner of Semifinal-2";
+        cout<<"~Semifinal-1: 1st Position(Pool-1) v/s 2nd Position(Pool-2)~";
+        cout<<"Semifinal-2: 2nd Position(Pool-1) v/s 1st Position(Pool-2)~";
+        cout<<"~FINAL: Winner of Semifinal-1 v/s Winner of Semifinal-2~";
     }
 
 }
