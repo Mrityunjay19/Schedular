@@ -20,13 +20,14 @@ body>h5 {
 
 #typeofschedule {
     padding: 10px 2px;
-    padding-right: 225px;
-    margin-bottom: 50px;
+    padding-right: 295px;
 }
 
 #noofteams {
     padding: 10px 2px;
     padding-right: 288px;
+    margin-bottom: 50px;
+
 }
 
 #noofpools {
@@ -36,7 +37,7 @@ body>h5 {
 
 #selectsport {
     padding: 10px 2px;
-    padding-right: 200px !important;
+    padding-right: 290px !important;
 }
 
 .top {
