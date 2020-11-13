@@ -44,7 +44,7 @@ void scheduleRoundRobin(int n, int pools){
     
 
     for(int p=1 ; p<=pools ; p++){
-        cout<<"POOL "<< p <<":-~";
+        cout<<"~POOL "<< p <<":-~";
 
         int offset = nn*(p-1);
         colorGraph(graph, nn, chromatic_number, offset);
@@ -59,10 +59,11 @@ void scheduleRoundRobin(int n, int pools){
         for (int i=0 ; i<chromatic_number ; i++) {
             cout<<"Week "<< i+1 <<":~";
             for (auto p : mp[i]) {
-                cout<<"Team-"<< p.first <<" v/s Team-"<< p.second << "~";
+                cout<<"Team-"<< p.first+1 <<" v/s Team-"<< p.second+1 << "~";
             }
         }
 
+        cout<<"~";
     }
 }
 
@@ -70,15 +71,15 @@ void scheduleRoundRobin(int n, int pools){
 void scheduleKnockout(int n, int pools){
 
     for(int p=1 ; p<=pools ; p++){
-        cout<<"POOL "<< p <<":-~";
+        cout<<"~POOL "<< p <<":-~";
 
         int nn = n/pools;
         int offset = nn*(p-1);
 
         int ctr = 1;
 
-        //first, second denotes team number and 1 for bye and 0 for no bye
-        vector<pair<int, int>> pairing(n, {-1, 0});
+        //denotes 1 for bye and 0 for no bye for i'th team
+        vector<int> pairing(n, 0);
         vector<string> temp;
 
         int uh_top = offset;
@@ -88,52 +89,48 @@ void scheduleKnockout(int n, int pools){
 
         int total_rounds = ceil(log2(nn));
         int byes = pow(2, total_rounds) - nn;
-        
-        for(int i=offset ; i<offset+nn ; i++){
-            pairing[i].first = i;
-        }
 
         for(int i=1 ; i<=byes ; i++){
             switch(i%4){
 
                 case 0:
-                    pairing[uh_bot].second = 1;
+                    pairing[uh_bot] = 1;
                     break;
 
                 case 1:
-                    pairing[lh_bot].second = 1;
+                    pairing[lh_bot] = 1;
                     lh_bot--;
                     break;
 
                 case 2:
-                    pairing[uh_top].second = 1;
+                    pairing[uh_top] = 1;
                     uh_top++;
                     break;
 
                 case 3:
-                    pairing[lh_top].second = 1;
+                    pairing[lh_top] = 1;
                     lh_top++;
                     break;
             }
         }
 
-        cout<<"Round 1:~";
+        cout<<"~Round 1:~";
         for(int i=offset ; i<offset+nn ; i++){
-            if(pairing[i].second == 0){
+            if(pairing[i] == 0){
                 cout<<"Match-"<< ctr <<": ";
-                cout<<"Team-"<< i <<" v/s Team-"<< i+1 <<"~";
+                cout<<"Team-"<< i+1 <<" v/s Team-"<< i+2 <<"~";
                 temp.push_back("Winner of Match-"+to_string(ctr));
                 ctr++;
                 i++;
             }
             else{
-                temp.push_back("Team-"+to_string(i));
+                temp.push_back("Team-"+to_string(i+1));
             }
         }
         
         int round = 2;
 
-        while(round < total_rounds){
+        while(round <= total_rounds){
             
             cout<<"~Round "<< round <<":~";
             int size = temp.size();
@@ -148,10 +145,6 @@ void scheduleKnockout(int n, int pools){
             temp.erase(temp.begin(), temp.begin()+size);
             round++;
         }
-
-        ctr--;
-        cout<<"~Round "<< round <<":~";
-        cout<<"Winner of Match-"<< ctr-1 <<" v/s Winner of Match-" << ctr << "~";
     }
 }
 
@@ -173,7 +166,6 @@ void scheduleLeague(int n, int pools){
 }
 
 int32_t main(int argc, char* argv[]){   
-
     if(argc == 1){
         return 0;
     }

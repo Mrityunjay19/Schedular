@@ -1,8 +1,4 @@
-var sporttype = document.getElementById('selectsport');
-var teams = document.getElementById('noofteams');
-var pools = document.getElementById('noofpools');
-var schedule = document.getElementById('typeofschedule');
-var submit = document.getElementById('submit');
+// Dropdown functions
 
 function createGames(value) {
     el = document.createElement('option');
@@ -31,6 +27,8 @@ function createTeams(value) {
     document.getElementById('noofteams').appendChild(el);
 }
 
+
+//jQuery
 
 $(document).ready(function(){
 
@@ -139,6 +137,15 @@ $(document).ready(function(){
         }
     });
 });
+
+
+//Server linking
+
+var sporttype = document.getElementById('selectsport');
+var teams = document.getElementById('noofteams');
+var pools = document.getElementById('noofpools');
+var schedule = document.getElementById('typeofschedule');
+var submit = document.getElementById('submit');
 
 submit.addEventListener('click', () => {
     var sport = sporttype.options[sporttype.selectedIndex].text;
