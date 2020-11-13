@@ -35,7 +35,7 @@ void colorGraph(vector<vector<int>>& graph, int nn, int k, int offset){
 }
 
 
-void scheduleRoundRobin(int n, int pools){
+void scheduleRoundRobin(int n, int pools, string prefix){
 
     int nn = n/pools;
     int chromatic_number = (nn%2 == 0)? nn-1 : nn;
@@ -59,7 +59,7 @@ void scheduleRoundRobin(int n, int pools){
         for (int i=0 ; i<chromatic_number ; i++) {
             cout<<"Week "<< i+1 <<":~";
             for (auto p : mp[i]) {
-                cout<<"Team-"<< p.first+1 <<" v/s Team-"<< p.second+1 << "~";
+                cout<< prefix <<"-"<< p.first+1 <<" v/s "<< prefix <<"-"<< p.second+1 << "~";
             }
         }
 
@@ -68,7 +68,7 @@ void scheduleRoundRobin(int n, int pools){
 }
 
 
-void scheduleKnockout(int n, int pools){
+void scheduleKnockout(int n, int pools, string prefix){
 
     for(int p=1 ; p<=pools ; p++){
         cout<<"~POOL "<< p <<":-~";
@@ -118,13 +118,13 @@ void scheduleKnockout(int n, int pools){
         for(int i=offset ; i<offset+nn ; i++){
             if(pairing[i] == 0){
                 cout<<"Match-"<< ctr <<": ";
-                cout<<"Team-"<< i+1 <<" v/s Team-"<< i+2 <<"~";
+                cout<< prefix <<"-"<< i+1 <<" v/s "<< prefix <<"-"<< i+2 <<"~";
                 temp.push_back("Winner of Match-"+to_string(ctr));
                 ctr++;
                 i++;
             }
             else{
-                temp.push_back("Team-"+to_string(i+1));
+                temp.push_back(prefix + "-" + to_string(i+1));
             }
         }
         
@@ -149,8 +149,8 @@ void scheduleKnockout(int n, int pools){
 }
 
 
-void scheduleLeague(int n, int pools){
-    scheduleRoundRobin(n, pools);
+void scheduleLeague(int n, int pools, string prefix){
+    scheduleRoundRobin(n, pools, prefix);
 
     if(pools == 1){
         cout<<"~Semifinal-1: 1st Position v/s 4th Position~";
@@ -172,16 +172,25 @@ int32_t main(int argc, char* argv[]){
     int n = stoi(argv[1]); 
     int pools = stoi(argv[2]);
     string match_type = argv[3];
+    string sport = argv[4];
+    string prefix;
+
+    if(sport == "Cricket" || sport=="Football" || sport=="Basketball" || sport=="Hockey"){
+		prefix = "Team";
+	}
+	else{
+		prefix = "Player";
+	}
     
     if(match_type == "RoundRobin"){
-        scheduleRoundRobin(n, pools);
+        scheduleRoundRobin(n, pools, prefix);
         
     }
     else if(match_type == "Knockout"){
-        scheduleKnockout(n, pools);
+        scheduleKnockout(n, pools, prefix);
     }
     else if(match_type == "League"){
-        scheduleLeague(n, pools);
+        scheduleLeague(n, pools, prefix);
     }
 
     return 0;
