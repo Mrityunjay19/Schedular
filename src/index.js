@@ -70,6 +70,66 @@ app.get('/Football', (req, res) => {
     })
 })
 
+app.get('/Basketball', (req, res) => {
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type;
+    exec(str, (err, stdout, stderr) => {
+        let arr = parse(stdout);
+        res.render('basketball', {
+            'data': arr
+        })
+    })
+})
+
+app.get('/Carrom', (req, res) => {
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type;
+    exec(str, (err, stdout, stderr) => {
+        let arr = parse(stdout);
+        res.render('carrom', {
+            'data': arr
+        })
+    })
+})
+
+app.get('/Hockey', (req, res) => {
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type;
+    exec(str, (err, stdout, stderr) => {
+        let arr = parse(stdout);
+        res.render('hockey', {
+            'data': arr
+        })
+    })
+})
+
+app.get('/Marathon', (req, res) => {
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type;
+    exec(str, (err, stdout, stderr) => {
+        let arr = parse(stdout);
+        res.render('marathon', {
+            'data': arr
+        })
+    })
+})
+
+app.get('/Swimming', (req, res) => {
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type;
+    exec(str, (err, stdout, stderr) => {
+        let arr = parse(stdout);
+        res.render('swimming', {
+            'data': arr
+        })
+    })
+})
+
+app.get('/400m_Race', (req, res) => {
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type;
+    exec(str, (err, stdout, stderr) => {
+        let arr = parse(stdout);
+        res.render('race 400m', {
+            'data': arr
+        })
+    })
+})
+
 app.listen(port, () => {
     console.log("Server has started on port " + port);
 })

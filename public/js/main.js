@@ -37,6 +37,33 @@ $(document).ready(function(){
     var head = $("#heading");
     var desc = $("#desc");
 
+
+
+    $("#selectsport").change(function(){
+
+        var sp = $(this).find("option:selected").text();
+        console.log(sp);
+
+        /*if(sp == "Basketball"){
+
+            document.getElementById('teams').innerHTML = "Number of Teams";
+        }
+        else if (sp == "Cricket"){
+            document.getElementById('teams').innerHTML = "Number of Teams";
+        }
+        else if ((sp == "Football")){
+            document.getElementById('teams').innerHTML = "Number of Teams";
+        }
+        else if ((sp == "Hockey")){
+            document.getElementById('teams').innerHTML = "Number of Teams";
+        }
+        else{
+            document.getElementById('teams').innerHTML = "Number of Players";
+
+        }*/
+    });
+
+
     $("#selectsport").change(function(){
 
         var sport = $(this).find("option:selected").text();

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            400m Race Scheduling
+        </title>
+        <link rel = "stylesheet" href="../css/sports.css"/>
+    </head>
+
+    <body>
+        <img id = "image" src="../img/race.jpg"/>
+
+        <h1 id = "heading">
+            400m Race
+        </h1>
+
+        <section id="schedule"> 
+            <div class="info" >Schedule</div>
+            <ul>
+                {{#each data}}
+                    {{#if this.first}}
+                        <h1>{{this.second}}</h3><br>
+                    {{else}}
+                        {{#if this.third}}
+                            <h3>{{this.second}}</h2>
+                        {{else}}
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.second}}<br>
+                        {{/if}}
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </section>
+
+        <section >
+            <div class= "info">Important Links :</div>
+            <div><a class = "links" href="https://www.worldathletics.org/disciplines/sprints/400-metres">World Athletics</a></div>
+            <div><a class = "links" href="https://indianathletics.in/afi_result/400-m-nationals/">Athletics Federation of India</a></div>  
+        </section>
+
+    </body>
+</html>

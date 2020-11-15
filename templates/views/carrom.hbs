@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            C Scheduling
+        </title>
+        <link rel = "stylesheet" href="../css/sports.css"/>
+    </head>
+
+    <body>
+        <img id = "image" src="../img/carrom.jpg"/>
+
+        <h1 id = "heading">
+            Carrom
+        </h1>
+
+        <section id="schedule"> 
+            <div class="info" >Schedule</div>
+            <ul>
+                {{#each data}}
+                    {{#if this.first}}
+                        <h1>{{this.second}}</h3><br>
+                    {{else}}
+                        {{#if this.third}}
+                            <h3>{{this.second}}</h2>
+                        {{else}}
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.second}}<br>
+                        {{/if}}
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </section>
+
+        <section >
+            <div class= "info">Important Links :</div>
+            <div><a class = "links" href="https://www.icfcarrom.com/">The International Carrom Federation</a></div>
+            <div><a class = "links" href="http://www.indiancarrom.co.in/">The All India Carrom Federation</a></div>  
+        </section>
+
+    </body>
+</html>
