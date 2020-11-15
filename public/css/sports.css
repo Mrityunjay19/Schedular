@@ -1,6 +1,8 @@
 body {
     width: 1000px;
+    background-color: rgb(234, 243, 240);
     margin: auto;
+    margin-bottom: 300px;
 }
 
 #image {
@@ -10,12 +12,14 @@ body {
 }
 
 body >h1 {
-    font-size: 50px;
+
     font-weight: bolder;
+    font-size: 60px;
+    margin-bottom: 50px
 }
 
 .info{
-    font-size: 25px;
+    font-size: 40px;
     font-weight: 600;
     margin-bottom: 30px;
 }
@@ -27,11 +31,17 @@ body >h1 {
 
 .links {
     text-decoration: none;
-    color: black;
+    color: blue;
     font-size: 20px;
     font-weight: 700;
 }
 
 .links:hover{
     color:red;
+}
+
+.bottom {
+
+    margin-bottom: 10px;
+    margin-left: 35px;
 }
