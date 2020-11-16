@@ -41,26 +41,22 @@ $(document).ready(function(){
 
     $("#selectsport").change(function(){
 
+        document.getElementById('teams').innerHTML = " ";
+        
+
         var sp = $(this).find("option:selected").text();
         console.log(sp);
 
-        /*if(sp == "Basketball"){
+        if((sp == "Basketball") || (sp == "Cricket") || (sp == "Football") || (sp == "Hockey")){
 
             document.getElementById('teams').innerHTML = "Number of Teams";
-        }
-        else if (sp == "Cricket"){
-            document.getElementById('teams').innerHTML = "Number of Teams";
-        }
-        else if ((sp == "Football")){
-            document.getElementById('teams').innerHTML = "Number of Teams";
-        }
-        else if ((sp == "Hockey")){
-            document.getElementById('teams').innerHTML = "Number of Teams";
-        }
-        else{
+            document.getElementById('nteams').innerHTML = "Number of Teams";
+
+        }else{
             document.getElementById('teams').innerHTML = "Number of Players";
+            document.getElementById('nteams').innerHTML = "Number of Players";
 
-        }*/
+        }
     });
 
 

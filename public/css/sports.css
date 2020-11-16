@@ -1,6 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@474&display=swap');
+
 body {
+    background-image: linear-gradient(to bottom right, rgb(162, 210, 255), rgb(29, 37, 151));
+}
+
+body>section {
+    font-family: 'Rubik', sans-serif;
+    color: black;
     width: 1000px;
     margin: auto;
+    margin-bottom: 300px;
+}
+
+#nav{
+    position: fixed;
+    width: 100%;
+    color: aliceblue;
 }
 
 #image {
@@ -10,28 +25,48 @@ body {
 }
 
 body >h1 {
-    font-size: 50px;
+
     font-weight: bolder;
+    font-size: 60px;
+    margin-bottom: 50px
 }
 
 .info{
-    font-size: 25px;
+    font-size: 40px;
     font-weight: 600;
-    margin-bottom: 30px;
 }
 
-#schedule{
 
-    margin-bottom: 40px;
-}
 
 .links {
     text-decoration: none;
-    color: black;
+    color: rgb(236, 199, 199);
     font-size: 20px;
     font-weight: 700;
 }
 
 .links:hover{
     color:red;
+}
+
+.bottom {
+
+    margin-bottom: 10px;
+    margin-left: 35px;
+}
+
+#round {
+    font-size: 25px;
+}
+
+#Ilinks {
+    margin-top: 70px;
+}
+
+#flink {
+    margin-top: 30px;
+}
+
+#S {
+    margin-bottom: 40px;
 }

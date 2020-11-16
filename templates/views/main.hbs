@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
         <title>
             Schedular
         </title>
@@ -9,7 +11,31 @@
     </head>
 
     <body>
-        <img id = "image" src="./img/main.jpg"/>
+        <nav class="navbar navbar-expand-sm bg-dark" id = "nav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:3000/?">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://en.wikipedia.org/wiki/Round-robin_scheduling">RoundRobin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://en.wikipedia.org/wiki/Single-elimination_tournament">Knockout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.google.co.in/?gfe_rd=cr&ei=M9rMVITxMMeBuAST7ICIBA&gws_rd=ssl">Exit</a>
+                </li>
+            </ul>
+        </nav>
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <section>
+
+            <img id = "image" src="./img/main.jpg"/>
 
         <h1 id = "heading">
             Tournament Schedular
@@ -29,14 +55,14 @@
                 <select class = "data" id = "selectsport">
                     <option>Select your Sport</option> 
                     <option>Basketball</option> 
-                    <option>Carrom    </option> 
-                    <option>Chess     </option> 
-                    <option>Cricket   </option>
-                    <option>Football  </option>
-                    <option>Hockey    </option> 
-                    <option>Marathon  </option> 
-                    <option>400m_Race </option> 
-                    <option>Swimming  </option> 
+                    <option>Carrom</option> 
+                    <option>Chess</option> 
+                    <option>Cricket</option>
+                    <option>Football</option>
+                    <option>Hockey</option> 
+                    <option>Marathon</option> 
+                    <option>400m_Race</option> 
+                    <option>Swimming</option> 
                 </select>
             </section>
 
@@ -59,7 +85,7 @@
                 <div class = "top" id = "teams">Number of Teams</div>
     
                 <select  id="noofteams" class = "data">
-                    <option value = "number of teams">Number of teams</option>
+                    <option id = "nteams" value = "number of teams">Number of teams</option>
                 </select>
         
             </section>
@@ -74,6 +100,17 @@
 
         <p id= "para">Select the number of teams and type of schedule 
             above to start the tournament.</p>
+
+        
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        </section>
+
         
 
         <script src = "https://code.jquery.com/jquery-3.5.1.min.js"></script>
