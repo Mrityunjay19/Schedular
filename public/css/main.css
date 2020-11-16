@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@474&display=swap');
 
 body{
-    background-image: linear-gradient(to bottom right, rgb(206, 231, 255), rgb(14, 28, 233));
-
+ background-color: rgb(234, 243, 240);
 }
 
 section {

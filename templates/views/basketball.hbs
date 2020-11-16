@@ -44,47 +44,35 @@
 
             <img id = "image" src="../img/basketball.jpg"/>
 
-        <h1 id = "heading">
-            Basketball
-        </h1>
+            <h1 id = "heading">
+                Basketball
+            </h1>
 
-        <section id="schedule"> 
-            <div class="info" id = "S">Schedule</div>
-            <ul>
-                {{#each data}}
-                    {{#if this.first}}
-                        <h1>{{this.second}}</h1>
-                    {{else}}
-                        {{#if this.third}}
-<<<<<<< HEAD
-                            <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.second}}</h2>
+            <section id="schedule"> 
+                <div class="info" id = "S">Schedule</div>
+                <ul>
+                    {{#each data}}
+                        {{#if this.first}}
+                            <h1>{{this.second}}</h1>
                         {{else}}
-                            <div id = 'round'>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.second}}<br>
-                            </div>
-=======
-                            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.second}}</h2>
-                        {{else}}
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.second}}<br>
->>>>>>> 7dab7fcb446fb017427a951af3ea4df92afee25e
+                            {{#if this.third}}
+                                <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.second}}</h2>
+                            {{else}}
+                                <div id = 'round'>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.second}}<br>
+                                </div>
+                            {{/if}}
                         {{/if}}
-                    {{/if}}
-                    <br >
-                {{/each}}
-            </ul>
-        </section>
+                        
+                    {{/each}}
+                </ul>
+            </section>
 
-        <section >
-<<<<<<< HEAD
-            <div class= "info" id = "Ilinks">Important Links :</div>
-            <div class = "bottom" id = "flink"><a class = "links" href="http://www.fiba.basketball/">International Basketball Federation</a></div>
-            <div class = "bottom"><a class = "links" href="https://www.basketballfederationindia.org/">Basketball Federation of India</a></div>  
-        </section>
-=======
-            <div class= "info">Important Links :</div>
-            <div class = "bottom"><a class = "links" href="http://www.fiba.basketball/">International Basketball Federation</a></div>
-            <div class = "bottom"><a class = "links" href="https://www.basketballfederationindia.org/">Basketball Federation of India</a></div>  
->>>>>>> 7dab7fcb446fb017427a951af3ea4df92afee25e
+            <section >
+                <div class= "info" id = "Ilinks">Important Links :</div>
+                <div class = "bottom" id = "flink"><a class = "links" href="http://www.fiba.basketball/">International Basketball Federation</a></div>
+                <div class = "bottom"><a class = "links" href="https://www.basketballfederationindia.org/">Basketball Federation of India</a></div>  
+            </section>
         </section>
         
 
