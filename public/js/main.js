@@ -45,7 +45,6 @@ $(document).ready(function(){
         
 
         var sp = $(this).find("option:selected").text();
-        console.log(sp);
 
         if((sp == "Basketball") || (sp == "Cricket") || (sp == "Football") || (sp == "Hockey")){
 
@@ -63,7 +62,6 @@ $(document).ready(function(){
     $("#selectsport").change(function(){
 
         var sport = $(this).find("option:selected").text();
-        console.log(sport);
 
         if(sport == "Select your Sport"){
             document.getElementById('typeofschedule').innerHTML = "";
@@ -83,7 +81,6 @@ $(document).ready(function(){
 
     $("#typeofschedule").change(function(){
         var schedule = $(this).find("option:selected").text();
-        console.log(schedule);
 
         p = schedule;
 
@@ -118,7 +115,7 @@ $(document).ready(function(){
     $("#noofpools").change(function(){
 
         var pool = $(this).find("option:selected").text();
-        console.log(pool);
+    
 
         var i = 2 * parseInt(pool);
 
@@ -129,7 +126,7 @@ $(document).ready(function(){
 
             while(i <= 30){
                 createTeams(i);
-                console.log(i);
+            
                 i = i + parseInt(pool);
             }
         }
@@ -141,7 +138,7 @@ $(document).ready(function(){
 
             while(i <= 10){
                 createTeams(i);
-                console.log(i);
+        
                 i = i + parseInt(pool);
             }
         }else if(p == "League"){
@@ -154,7 +151,7 @@ $(document).ready(function(){
 
             while(i <= 10){
                 createTeams(i);
-                console.log(i);
+    
                 i = i + parseInt(pool);
             }
         }
