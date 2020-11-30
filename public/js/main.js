@@ -121,8 +121,8 @@ $(document).ready(function(){
 
         if(p == "Knockout"){
 
-            document.getElementById('noofteams').innerHTML = ''; 
-            createTeams("number of teams");
+            document.getElementById('noofteams').innerHTML = '';
+            
 
             while(i <= 30){
                 createTeams(i);
@@ -133,8 +133,6 @@ $(document).ready(function(){
         else if(p == "RoundRobin"){
 
             document.getElementById('noofteams').innerHTML = '';
-            createTeams("number of teams");
-
 
             while(i <= 10){
                 createTeams(i);
@@ -147,7 +145,6 @@ $(document).ready(function(){
             }
 
             document.getElementById('noofteams').innerHTML = '';
-            createTeams("number of teams");
 
             while(i <= 10){
                 createTeams(i);
