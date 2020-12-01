@@ -40,7 +40,7 @@ app.get('', (req, res) => {
 })
 
 app.get('/Chess', (req, res) => {
-    const str = './a.out ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + 'Chess';
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + 'Chess';
     exec(str, (err, stdout, stderr) => {
         let arr = parse(stdout);
         res.render('chess', {
@@ -50,7 +50,7 @@ app.get('/Chess', (req, res) => {
 })
 
 app.get('/Cricket', (req, res) => {
-    const str = './a.out ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + 'Cricket';
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + 'Cricket';
     exec(str, (err, stdout, stderr) => {
         let arr = parse(stdout);
         res.render('cricket', {
@@ -60,9 +60,8 @@ app.get('/Cricket', (req, res) => {
 })
 
 app.get('/Football', (req, res) => {
-    const str = './a.out ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + 'Football';
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + 'Football';
     exec(str, (err, stdout, stderr) => {
-        console.log(stdout)
         let arr = parse(stdout);
         res.render('football', {
             'data': arr
@@ -71,7 +70,7 @@ app.get('/Football', (req, res) => {
 })
 
 app.get('/Basketball', (req, res) => {
-    const str = './a.out ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + 'Basketball';
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + 'Basketball';
     exec(str, (err, stdout, stderr) => {
         let arr = parse(stdout);
         res.render('basketball', {
@@ -81,7 +80,7 @@ app.get('/Basketball', (req, res) => {
 })
 
 app.get('/Carrom', (req, res) => {
-    const str = './a.out ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + 'Carrom';
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + 'Carrom';
     exec(str, (err, stdout, stderr) => {
         let arr = parse(stdout);
         res.render('carrom', {
@@ -91,7 +90,7 @@ app.get('/Carrom', (req, res) => {
 })
 
 app.get('/Hockey', (req, res) => {
-    const str = './a.out ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + 'Hockey';
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + 'Hockey';
     exec(str, (err, stdout, stderr) => {
         let arr = parse(stdout);
         res.render('hockey', {
@@ -101,7 +100,7 @@ app.get('/Hockey', (req, res) => {
 })
 
 app.get('/Marathon', (req, res) => {
-    const str = './a.out ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + 'Marathon';
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + 'Marathon';
     exec(str, (err, stdout, stderr) => {
         let arr = parse(stdout);
         res.render('marathon', {
@@ -111,7 +110,7 @@ app.get('/Marathon', (req, res) => {
 })
 
 app.get('/Swimming', (req, res) => {
-    const str = './a.out ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + 'Swimming';
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + 'Swimming';
     exec(str, (err, stdout, stderr) => {
         let arr = parse(stdout);
         res.render('swimming', {
@@ -121,7 +120,7 @@ app.get('/Swimming', (req, res) => {
 })
 
 app.get('/400m_Race', (req, res) => {
-    const str = './a.out ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + '400m_Race';
+    const str = 'a ' + req.query.numofteams + ' ' + req.query.numofpools + ' ' + req.query.type + ' ' + '400m_Race';
     exec(str, (err, stdout, stderr) => {
         let arr = parse(stdout);
         res.render('race 400m', {
